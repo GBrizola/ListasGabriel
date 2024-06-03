@@ -1,0 +1,21 @@
+int botao1 = 6;
+int botao2 = 4; 
+int led = 3;
+
+void setup(){
+    pinMode(botao1,INPUT);
+    pinMode(botao2,INPUT);
+    pinMode(led,OUTPUT);
+}
+
+void loop(){
+    bool estadoBotao1 = digitalRead(botao1);
+    bool estadoBotao2 = digitalRead(botao2);
+
+    if(estadoBotao1 == true || estadoBotao2 == true){
+        digitalWrite(led,1);
+    }
+    if(estadoBotao1 == true && estadoBotao2 == true){
+        digitalWrite(led,0);
+    }
+}

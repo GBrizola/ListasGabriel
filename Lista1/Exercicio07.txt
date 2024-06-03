@@ -1,0 +1,56 @@
+int botao = 6;
+int led = 4; 
+
+int incremento = 0;
+
+void setup(){
+    pinMode(botao,INPUT);
+    pinMode(led,OUTPUT);
+}
+
+void loop(){
+    bool estadoBotao = digitalRead(botao);
+
+    if(estadoBotao == true){
+        incremento ++;
+        delay(200);
+    }
+
+    repete(incremento);
+}
+
+void repete(int numero){
+
+    switch(numero){
+
+    case 1:
+        
+    digitalWrite(led,1);
+    delay(1000);
+    digitalWrite(led,0);
+    delay(1000);
+
+    break;
+
+    case 2:
+
+    digitalWrite(led,1);
+    delay(500);
+    digitalWrite(led,0);
+    delay(500);
+
+    break;
+
+    case 3:
+
+    digitalWrite(led,1);
+    delay(200);
+    digitalWrite(led,0);
+    delay(200);
+
+    break;
+    }
+}
+
+
+    

@@ -1,0 +1,30 @@
+int vermelho = 3;
+int amarelo = 4;
+int verde = 5;
+
+void setup() {
+  
+  for(int j = 3; j<=5; j++){
+    pinMode(j,OUTPUT);
+
+  }
+}
+
+void loop () {
+  	for (int i = 5000; i >= 5; i--){
+
+    i *=0.80;
+      
+  	multi(vermelho,i);
+    multi(amarelo,i);
+    multi(verde,i);
+  
+    }
+}
+
+void multi(int cor, int i){
+  	digitalWrite(cor, 1);
+  	delay(i);
+    digitalWrite(cor, 0);
+  
+}
